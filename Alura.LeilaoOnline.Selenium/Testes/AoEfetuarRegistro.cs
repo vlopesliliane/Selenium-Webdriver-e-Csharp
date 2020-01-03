@@ -22,7 +22,7 @@ namespace Alura.LeilaoOnline.Selenium.Testes
             var registroPO = new RegistroPO(driver);
             registroPO.Visitar();
 
-            registroPO.PreencheFormulario("Daniel Portugal", "daniel.portugal@caelum.com.br", "123", "123");
+            registroPO.PreencheFormulario("Liliane Lopes", "vlopes.liliane@example.com", "123", "123");
 
             //act
             registroPO.SubmeteFormulario();
@@ -33,10 +33,10 @@ namespace Alura.LeilaoOnline.Selenium.Testes
         }
 
         [Theory]
-        [InlineData("", "daniel.portugal@caelum.com.br", "123", "123")]
-        [InlineData("Daniel Portugal", "daniel", "123", "123")]
-        [InlineData("Daniel Portugal", "daniel.portugal@caelum.com.br", "123", "456")]
-        [InlineData("Daniel Portugal", "daniel.portugal@caelum.com.br", "123", "")]
+        [InlineData("", "liliane.lopes@caelum.com.br", "123", "123")]
+        [InlineData("Liliane", "liliane", "123", "123")]
+        [InlineData("Liliane Tester", "tester.liliane@caelum.com.br", "123", "456")]
+        [InlineData("Liliane Tester", "liliane.testerl@caelum.com.br", "123", "")]
         public void DadoInfoinvalidasDeveContinuarNaHome(
             string nome,
             string email,
